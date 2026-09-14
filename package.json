@@ -1,0 +1,48 @@
+{
+  "name": "fresh-memory-mcp",
+  "version": "0.2.2",
+  "private": true,
+  "description": "Local MCP memory that detects source changes and tracks freshness, history, and impact.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarthakshah/fresh-memory-mcp.git"
+  },
+  "homepage": "https://github.com/sarthakshah/fresh-memory-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/sarthakshah/fresh-memory-mcp/issues"
+  },
+  "type": "module",
+  "bin": {
+    "fresh-memory-mcp": "bin/fresh-memory-mcp.js"
+  },
+  "scripts": {
+    "start": "node ./bin/fresh-memory-mcp.js",
+    "demo": "node ./examples/demo/demo.js",
+    "test": "node --test",
+    "check": "node --check ./src/errors.js && node --check ./src/source-reader.js && node --check ./src/store.js && node --check ./src/tools.js && node --check ./src/server.js && node --check ./src/cli.js",
+    "validate": "npm run check && npm test && npm run demo",
+    "prepack": "npm run validate",
+    "prepublishOnly": "node ./scripts/deny-publish.js",
+    "release:check": "npm pack --dry-run"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "keywords": [
+    "ai",
+    "memory",
+    "mcp",
+    "model-context-protocol",
+    "source-tracking",
+    "sqlite"
+  ],
+  "files": [
+    "bin",
+    "src",
+    "examples",
+    "docs",
+    "CHANGELOG.md",
+    "README.md"
+  ]
+}

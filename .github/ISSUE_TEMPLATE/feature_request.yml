@@ -1,0 +1,25 @@
+name: Feature request
+description: Suggest a practical FreshMemory improvement
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What freshness or memory problem should this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: workflow
+    attributes:
+      label: Desired workflow
+      description: Show how a person or agent should use the feature.
+    validations:
+      required: true
+  - type: textarea
+    id: safety
+    attributes:
+      label: Safety considerations
+      description: What should FreshMemory never update or infer automatically?
